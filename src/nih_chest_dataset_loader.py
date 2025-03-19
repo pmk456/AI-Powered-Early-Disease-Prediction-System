@@ -22,6 +22,8 @@ class LoadPneumoniaDataset:
         """This is used to transform the image so it can be feeded to the EfficientNetb0 neural network"""
         pass
 
+    
+
     def load_nih_data(self):
         """Used to load the whole dataset from the given path"""
         pass
