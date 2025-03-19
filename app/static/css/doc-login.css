@@ -1,0 +1,217 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/static/images/bg-1.jpg);
+
+}
+
+.overall {
+    display: flex;
+}
+
+.side-doc-img {
+    height: 670px;
+    width: 400px;
+}
+
+.logo-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 60px;
+    z-index: 1;
+}
+
+.top-head {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    font-size: 2.0em;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.card-img1 {
+    height: 60px;
+    padding: 4px;
+    border-radius: 50%;
+
+}
+
+.card-img2 {
+    height: 50px;
+    padding: 10px 6px;
+    position: relative;
+    top: -5px;
+}
+
+
+
+h1 {
+    position: fixed;
+    top: 10px;
+}
+
+.wrap-bg {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.wrapper {
+    position: relative;
+    /* top: 100px; */
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    /*vertical*/
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    /*thickness*/
+    transition: 0.5s;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    color: #162938;
+    line-height: 57px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+/* focus means user clicks into an input field then automatically it trigers */
+/* label means It works for input types with built-in validation (like email, number, url, etc.) */
+
+.remember-forget {
+    font-size: 0.9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15 0 15px;
+    /*top,bottom,left,right*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forget a {
+    color: #162938;
+    text-decoration: none;
+}
+
+.remember-forget a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: 0.9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload with Permission</title>
+    <link rel="stylesheet" href="/static/css/upload.css">
+
+</head>
+
+<body>
+    <div class="logo-section">
+        <img src="/static/images/au png.jpg" class="card-img1" alt="...">
+        <h1 class="top-head">AI Powered Early Disease Prediction</h1>
+        <img src="/static/images/3.O logo.png" class="card-img2" alt="...">
+    </div>
+    <div class="overall">
+        <div class="upload-container">
+            <h2>Upload Your File</h2>
+            <input type="file" id="fileInput">
+            <button class="upload-btn" onclick="requestPermission()">Upload</button>
+        </div>
+
+        <div id="file-container">
+            <p id="file-name">Loading file...</p>
+            <button id="open-file-btn" disabled>Open File</button>
+        </div>
+    </div>
+    <script>
+        function requestPermission() {
+            const fileInput = document.getElementById('fileInput');
+            if (!fileInput.files.length) {
+                alert('Please select a file first.');
+                return;
+            }
+
+            const confirmUpload = confirm('Do you allow this file to be uploaded?');
+            if (confirmUpload) {
+                alert('File uploaded successfully!');
+                // Here you can add code to actually upload the file
+            } else {
+                alert('File upload canceled.');
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const fileNameElement = document.getElementById("file-name");
+            const openFileBtn = document.getElementById("open-file-btn");
+            let fileUrl = "";
+
+            // Fetch file data from backend
+            fetch("/api/getFile") // Example endpoint
+                .then(response => response.json())
+                .then(data => {
+                    fileUrl = data.fileUrl;
+                    fileNameElement.textContent = `File ready to open: ${fileUrl.split("/").pop()}`;
+                    openFileBtn.disabled = false;
+                })
+                .catch(err => {
+                    fileNameElement.textContent = "Error loading file.";
+                    console.error("Error fetching file:", err);
+                });
+
+            openFileBtn.addEventListener("click", () => {
+                if (fileUrl) {
+                    window.open(fileUrl, "_blank");
+                } else {
+                    alert("No file available to open.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

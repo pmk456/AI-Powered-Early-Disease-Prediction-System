@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/doc-login.css">
+</head>
+
+<body>
+    <div class="logo-section">
+        <img src="/static/images/au png.jpg" class="card-img1" alt="...">
+        <h1 class="top-head">AI Powered Early Disease Prediction</h1>
+        <img src="/static/images/3.O logo.png" class="card-img2" alt="...">
+    </div>
+    <!-- <h1>Admins Login Form</h1> -->
+
+    <div class="wrap-bg">
+        <div class="wrapper">
+            <div class="content">
+                <span class="icon-close"><ion-icon name="close-outline" onclick="goToHomePage()"></ion-icon></span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                            <input type="text" required />
+                            <label>User Id</label>
+                        </div>
+
+
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                            <input type="password" required />
+                            <label>Password</label>
+                        </div>
+
+
+                        <!-- <div class="remember-forget">
+            <label><input type="checkbox" />Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div> -->
+
+
+                        <button type="submit" id="loginForm" class="btn" onclick="goToDashBoard()">Login</button>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/static/js/script.js"></script>
+<script>
+    function goToDashBoard() {
+        window.location.href = '/static/templates/doc-dash.html'; // Change '/' to your desired homepage URL if needed
+    }
+
+</script>
+
+</html>

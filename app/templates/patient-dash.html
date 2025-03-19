@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Dashboard</title>
+    <link rel="stylesheet" href="/static/css/patient-dash.css">
+
+</head>
+
+<body>
+    <div class="logo-section">
+        <img src="/static/images/au png.jpg" class="card-img1" alt="...">
+        <h1 class="top-head">AI Powered Early Disease Prediction</h1>
+        <img src="/static/images/3.O logo.png" class="card-img2" alt="...">
+    </div>
+    <div class="full-dash-bg">
+        <div class="full-dash">
+            <h2>Doctor's Dashboard</h2>
+            <div class="dashboard">
+                <div class="card" onclick="goToUploadPage()"> Check Your Details</div>
+                <div class="card" onclick="goToUploadPage()"> Enquiries</div>
+                <!-- <div class="card" onclick=""> Patient Data</div>
+                <div class="card" onclick=""> Emergencies</div> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAlert(section) {
+            alert("You clicked on " + section);
+        }
+        function goToUploadPage() {
+            window.location.href = '/static/templates/upload.html'; // Change '/' to your desired homepage URL if needed
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0px 0px;
+    margin: 0 0px;
+    /* margin: 0; */
+    font-family: 'Poppins', sans-serif;
+    /* font-size: .92rem; */
+    font-size: 14px;
+    background-image: url(/static/images/bg-1.jpg);
+    background-repeat: no-repeat;
+
+}
+
+.overall {
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.upload-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: fit-content;
+    position: relative;
+    /* top: 200px;
+    left: 100px; */
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+.upload-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.upload-btn:hover {
+    background-color: #45a049;
+}
+
+.logo-section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    height: 60px;
+    z-index: 1;
+}
+
+.top-head {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: white;
+}
+
+.card-img1 {
+    height: 60px;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.card-img2 {
+    height: 50px;
+    padding: 10px 6px;
+    position: relative;
+    top: -5px;
+}
+
+#file-name {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#file-container {
+    height: 135px;
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    justify-items: center;
+}
+
+#open-file-btn {}
+
+@media (max-width: 768px) {
+    .overall {
+        top: 100px;
+        /* Reduced margin for tablets */
+    }
+
+    .upload-container {
+        max-width: 250px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .overall {
+        flex-direction: column;
+        gap: 20px;
+        top: 50px;
+    }
+
+    .upload-container {
+        width: 90%;
+    }
+
+    .top-head {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-head {
+        font-size: 1.2em;
+    }
+
+    #file-container {
+        width: 100px;
+        height: 100px;
+    }
+}
