@@ -1,7 +1,6 @@
 import openai, os
 import base64
 # API_TOKEN = os.getenv('API_TOKEN')
-openai.api_key = "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"
 
 class GPT:
     
