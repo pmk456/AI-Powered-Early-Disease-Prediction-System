@@ -5,7 +5,7 @@ import numpy as np
 
 IMG_SIZE = (224, 224)
 
-MODEL_PATH = "models/chest_xray_model.keras"
+MODEL_PATH = "app/models/chest_xray_model.keras"
 
 class XRayPredictor:
     def __init__(self):
