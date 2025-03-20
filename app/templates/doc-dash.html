@@ -19,24 +19,13 @@
         <div class="full-dash">
             <h2>Doctor's Dashboard</h2>
             <div class="dashboard">
-                <div class="card" onclick="goToUploadPage()"> X-RAY Insight</div>
-                <div class="card" onclick="goToUploadPage()"> MRI Insight</div>
-                <div class="card" onclick=""> Patient Data</div>
-                <div class="card" onclick=""> Emergencies</div>
+                <a class="card" href="/doctor-login/doctor-dashboard/doctor-upload-xray"> X-RAY Insight</a>
+                <a class="card" href="/doctor-login/doctor-dashboard/doctor-upload-mri"> MRI Insight</a>
+                <a class="card" onclick=""> Patient Data</a>
+                <a class="card" onclick=""> Emergencies</a>
             </div>
         </div>
     </div>
-
-    <script>
-        function showAlert(section) {
-            alert("You clicked on " + section);
-        }
-        function goToUploadPage() {
-            window.location.href = '/static/templates/upload.html'; // Change '/' to your desired homepage URL if needed
-        }
-
-    </script>
-
 </body>
 
 </html>

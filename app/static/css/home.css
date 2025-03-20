@@ -9,7 +9,7 @@ body {
     font-family: 'Poppins', sans-serif;
     /* font-size: .92rem; */
     font-size: 14px;
-    background-image: url(../static/images/bg-1.jpg);
+    background-image: url(/static/images/bg-1.jpg);
 }
 
 .logo-section {

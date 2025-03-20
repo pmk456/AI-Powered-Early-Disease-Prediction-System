@@ -19,23 +19,13 @@
         <div class="full-dash">
             <h2>Doctor's Dashboard</h2>
             <div class="dashboard">
-                <div class="card" onclick="goToUploadPage()"> Check Your Details</div>
+                <a class="card" href="/patient-login/check-report"> Check Your Details</a>
                 <div class="card" onclick="goToUploadPage()"> Enquiries</div>
-                <!-- <div class="card" onclick=""> Patient Data</div>
-                <div class="card" onclick=""> Emergencies</div> -->
             </div>
         </div>
     </div>
 
-    <script>
-        function showAlert(section) {
-            alert("You clicked on " + section);
-        }
-        function goToUploadPage() {
-            window.location.href = '/static/templates/upload.html'; // Change '/' to your desired homepage URL if needed
-
-        }
-    </script>
+   
 
 </body>
 

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor's Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/static/css/admin-dash.css">
-
 </head>
-
 <body>
     <div class="logo-section">
         <img src="/static/images/au png.jpg" class="card-img1" alt="...">
@@ -17,7 +14,7 @@
     </div>
     <div class="full-dash-bg">
         <div class="full-dash">
-            <h2>Doctor's Dashboard</h2>
+            <h2>Admin Dashboard</h2>
             <div class="dashboard">
                 <div class="card" onclick="goToUploadPage()"> Assign Doctors</div>
                 <div class="card" onclick="goToUploadPage()"> Accuracy Detection</div>
@@ -25,17 +22,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        function showAlert(section) {
-            alert("You clicked on " + section);
-        }
-        function goToUploadPage() {
-            window.location.href = '/static/templates/upload.html'; // Change '/' to your desired homepage URL if needed
-
-        }
-    </script>
-
 </body>
-
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload with Permission</title>
+    <link rel="stylesheet" href="/static/css/upload.css">
+</head>
+<body>
+    <div class="logo-section">
+        <img src="/static/images/au png.jpg" class="card-img1" alt="...">
+        <h1 class="top-head">AI Powered Early Disease Prediction</h1>
+        <img src="/static/images/3.O logo.png" class="card-img2" alt="...">
+    </div>
+    <div class="overall">
+        <div class="upload-container">
+            <h2>Upload Your File</h2>
+            <form action="/doctor-login/doctor-dashboard/doctor-upload-xray" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="image_file" accept="image/*" required>
+                <button class="upload-btn" type='submit'>Upload</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
