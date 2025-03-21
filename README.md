@@ -1,7 +1,8 @@
 # AI-Powered Early Disease Prediction System  
 
 ## Overview  
-Ever wondered if AI could give you early insights into your health? This **AI-Powered Early Disease Prediction System** does exactly that! Using **EfficientNetB0** and machine learning, it analyzes symptoms and predicts potential diseases—helping you take early action before visiting a doctor.  
+Designed specifically for healthcare professionals and researchers, our AI-Powered Early Disease Prediction System leverages state-of-the-art deep learning techniques—featuring the EfficientNetB0 architecture—to analyze patient symptoms and predict potential diseases at an early stage. This decision-support tool is intended to complement clinical judgment by providing timely, data-driven insights that can assist in early intervention and improve patient outcomes.
+
 
 ## Features  
 - **AI-Powered Predictions** – Uses a deep learning model for accurate disease detection.  
