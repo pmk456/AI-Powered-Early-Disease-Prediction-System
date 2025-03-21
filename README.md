@@ -1,27 +1,27 @@
-# 🏥 AI-Powered Early Disease Prediction System  
+# AI-Powered Early Disease Prediction System  
 
-## 🚀 Overview  
+## Overview  
 Ever wondered if AI could give you early insights into your health? This **AI-Powered Early Disease Prediction System** does exactly that! Using **EfficientNetB0** and machine learning, it analyzes symptoms and predicts potential diseases—helping you take early action before visiting a doctor.  
 
-## 🔥 Features  
-- ✅ **AI-Powered Predictions** – Uses a deep learning model for accurate disease detection.  
-- 🎨 **Easy-to-Use Interface** – A simple web UI for entering symptoms.  
-- 🌍 **Multi-Disease Support** – Covers a variety of illnesses for early alerts.  
-- ⚡ **Fast & Efficient** – Quick results based on pre-trained models.  
-- 🔐 **Privacy-Focused** – No sensitive data storage or tracking.  
+## Features  
+- **AI-Powered Predictions** – Uses a deep learning model for accurate disease detection.  
+- **Easy-to-Use Interface** – A simple web UI for entering symptoms.  
+- **Multi-Disease Support** – Covers a variety of illnesses for early alerts.  
+- **Fast & Efficient** – Quick results based on pre-trained models.  
+- **Privacy-Focused** – No sensitive data storage or tracking.  
 
-## 🏗️ Tech Stack  
+## Tech Stack  
 - **Backend:** Python, Flask  
 - **Frontend:** HTML, CSS, JavaScript  
 - **Machine Learning:** TensorFlow, Scikit-learn, **EfficientNetB0**  
 - **APIs:** Custom API for disease prediction  
 
-## 🤖 How the AI Works  
+## How the AI Works  
 We use **EfficientNetB0**, a lightweight yet powerful deep learning model, trained on medical datasets to predict diseases based on symptoms.  
 **Key Training Details:**  
-- 📊 **Dataset:** Medical records & symptom-based data  
-- 🔧 **Preprocessing:** Normalization, augmentation  
-- 🎯 **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score  
+-  **Dataset:** NIH Chest X-Ray
+-  **Preprocessing:** Normalization, augmentation  
+-  **Evaluation Metrics:** Accuracy, Precision, Recall, F1-score  
 
 ## 📂 Project Structure  
 ### 🛠 Explanation:  
@@ -37,7 +37,7 @@ We use **EfficientNetB0**, a lightweight yet powerful deep learning model, train
 - **`.gitignore`** → Prevents unnecessary files from being committed.  
 - ** run ** → Starting Point
 
-## 🛠️ Installation & Setup  
+## Installation & Setup  
 ### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/pmk456/AI-Powered-Early-Disease-Prediction-System.git
