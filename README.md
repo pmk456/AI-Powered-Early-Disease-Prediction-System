@@ -26,12 +26,13 @@ We use **EfficientNetB0**, a lightweight yet powerful deep learning model, train
 
 ## 📂 Project Structure  
 ### 🛠 Explanation:  
-- **`model_train/`** → Training Files
-- **`models/`** → Stores trained ML models.  
-- **`static/`** → Contains CSS, JavaScript, and images for the frontend.  
-- **`templates/`** → Holds HTML files for the user interface.  
-- **`api.py`** → API for predicting disease from given X-Ray
-- **`chat.py`** → LLM API
+- **`app/`
+  - **`model_train/`** → Training Files
+  - **`models/`** → Stores trained ML models.   
+  - **`static/`** → Contains CSS, JavaScript, and images for the frontend.  
+  - **`templates/`** → Holds HTML files for the user interface.  
+  - **`api.py`** → API for predicting disease from given X-Ray
+  - **`chat.py`** → LLM API
 - **`requirements.txt`** → Lists dependencies.  
 - **`.gitignore`** → Prevents unnecessary files from being committed.
 - ** run ** → Starting Point
