@@ -26,16 +26,14 @@ We use **EfficientNetB0**, a lightweight yet powerful deep learning model, train
 
 ## 📂 Project Structure  
 ### 🛠 Explanation:  
-- **`data/`** → Holds the dataset for training.  
+- **`model_train/`** → Training Files
 - **`models/`** → Stores trained ML models.  
 - **`static/`** → Contains CSS, JavaScript, and images for the frontend.  
 - **`templates/`** → Holds HTML files for the user interface.  
-- **`app/`** → Core application logic, including:  
-  - `app.py` → Main Flask application.  
-  - `model.py` → Defines and loads the ML model. 
-  - `routes.py` → API endpoints and Flask routes.  
+- **`api.py`** → API for predicting disease from given X-Ray
+- **`chat.py`** → LLM API
 - **`requirements.txt`** → Lists dependencies.  
-- **`.gitignore`** → Prevents unnecessary files from being committed.  
+- **`.gitignore`** → Prevents unnecessary files from being committed.
 - ** run ** → Starting Point
 
 ## Installation & Setup  
