@@ -1,7 +1,7 @@
 import openai, os
 import base64
-# API_TOKEN = os.getenv('API_TOKEN')
-
+API_TOKEN = os.getenv('API_TOKEN')
+openai.api_token = API_TOKEN
 class GPT:
     
     def __init__(self):    
