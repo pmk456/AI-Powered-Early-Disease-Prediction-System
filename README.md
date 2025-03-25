@@ -55,7 +55,8 @@ pip install -r requirements.txt
 ```
 ## Run the Application
 ```bash
+export API_TOKEN=openai-token
 python run.py
 ```
 ## Open in Browser
- ** http://localhost:5000
+ **http://localhost:5000
