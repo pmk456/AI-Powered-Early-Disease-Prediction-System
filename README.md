@@ -33,9 +33,10 @@ We use **EfficientNetB0**, a lightweight yet powerful deep learning model, train
   - **`templates/`** → Holds HTML files for the user interface.  
   - **`api.py`** → API for predicting disease from given X-Ray
   - **`chat.py`** → LLM API
+  - **`generate_heatmap.py` → Heatmap generator for explainability of AI Model
 - **`requirements.txt`** → Lists dependencies.  
 - **`.gitignore`** → Prevents unnecessary files from being committed.
-- ** run ** → Starting Point
+- **run** → Starting Point
 
 ## Installation & Setup  
 ### 1️⃣ Clone the Repository  
