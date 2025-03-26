@@ -35,6 +35,7 @@ We use **EfficientNetB0**, a lightweight yet powerful deep learning model, train
   - **`chat.py`** → LLM API
   - **`generate_heatmap.py`** → Heatmap generator for explainability of AI Model
   - **`routes.py`** → Routes for Backend
+  - **`utils.py`** → Basic utility functions
 - **`requirements.txt`** → Lists dependencies.  
 - **`.gitignore`** → Prevents unnecessary files from being committed.
 - **run** → Starting Point
