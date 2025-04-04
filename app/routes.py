@@ -6,7 +6,6 @@ Date & Time: 20-03-2025 1:59 AM
 from flask import Flask, Blueprint, render_template, request, session, send_file, Response
 
 import os
-import api
 from . import utils
 from . import api
 from . import generate_heatmap
