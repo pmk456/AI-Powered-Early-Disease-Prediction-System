@@ -79,11 +79,7 @@ class XRayHeatmapGenerator:
 
 if __name__ == "__main__":
     heatmap_generator = XRayHeatmapGenerator()
-
-    # Load test image
     image_bytes = open("model_train/NIH_CHEST_XRAY/00000001_002.png", "rb").read()
-
-    # Generate and overlay heatmap
     heatmap = heatmap_generator.generate_heatmap(image_bytes)
     if heatmap is not None:
         output_path = heatmap_generator.overlay_heatmap(heatmap, image_bytes)
