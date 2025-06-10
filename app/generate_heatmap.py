@@ -13,7 +13,6 @@ class XRayHeatmapGenerator:
     def __init__(self):
         self.model = tf.keras.models.load_model(MODEL_PATH)
         os.makedirs(OUTPUT_DIR, exist_ok=True)  # Ensure directory exists
-
     def _transform_image(self, image_bytes):
         """Preprocess image like in XRayPredictor"""
         try:
@@ -32,13 +31,11 @@ class XRayHeatmapGenerator:
         img_array = self._transform_image(image_bytes)
         if img_array is None:
             return None
-
         # Get the last convolutional layer
         last_conv_layer = self.model.get_layer("top_conv")  # Adjust layer name if different
         grad_model = tf.keras.models.Model(
             [self.model.inputs], [last_conv_layer.output, self.model.output]
         )
-
         # Compute gradients
         with tf.GradientTape() as tape:
             conv_outputs, predictions = grad_model(img_array)
@@ -48,29 +45,23 @@ class XRayHeatmapGenerator:
 
         grads = tape.gradient(loss, conv_outputs)
         pooled_grads = tf.reduce_mean(grads, axis=(0, 1, 2))
-
         # Multiply each channel by its gradient importance
         heatmap = conv_outputs[0] @ pooled_grads[..., tf.newaxis]
         heatmap = tf.squeeze(heatmap)
         heatmap = tf.maximum(heatmap, 0) / tf.math.reduce_max(heatmap)  # Normalize
-
         return heatmap.numpy()
 
     def overlay_heatmap(self, heatmap, image_bytes, output_filename="heatmap_overlay.png", alpha=0.5):
         """Overlays the Grad-CAM heatmap on the original image and saves it."""
         img = Image.open(BytesIO(image_bytes)).convert("RGB").resize(IMG_SIZE)
         img = np.array(img, dtype=np.uint8)
-
         # Resize heatmap to match image
         heatmap = cv2.resize(heatmap, (img.shape[1], img.shape[0]))
         heatmap = np.uint8(255 * heatmap)
-
         # Apply colormap
         colormap = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
-
         # Blend heatmap with original image
         overlay = cv2.addWeighted(img, 1 - alpha, colormap, alpha, 0)
-
         # Save the output image
         output_path = os.path.join(OUTPUT_DIR, output_filename)
         Image.fromarray(overlay).save(output_path)
